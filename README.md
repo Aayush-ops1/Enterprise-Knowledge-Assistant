@@ -18,31 +18,31 @@
 
 <h2 style = "color:#333;"> Student Details </h2>
 <div align = "left" style ="margin: 20px; font-size: 16px;">
-    <p><strong>Name:</strong> <!--- Add your name---> </p>
-    <p><strong>Email ID:</strong> <!--- Add your mail id ---> </p>
-    <p><strong>College Name:</strong> <!--- Add your college name---> </p>
-    <p><strong>Branch/Specialization :</strong> <!--- Add your branch name---> </p>
-    <p><strong>College ID:</strong> <!--- Add your college ID---> </p>
+    <p><strong>Name:</strong> Aayush Gupta </p>
+    <p><strong>Email ID:</strong> aayushguptag39aiml@gmail.com </p>
+    <p><strong>College Name:</strong> Institute of Engineering and management </p>
+    <p><strong>Branch/Specialization :</strong> Computer Science and Engineering (CSE) </p>
+    <p><strong>College ID:</strong> 12023002001004 </p>
 </div>
 
 <hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
 
 <h2 style="color:#333;"> Course Details </h2>
 <div align="left" style="margin: 20px; font-size: 16px;">
-    <p><strong>Course Opted:</strong> <!--- Add your course name---> </p>
-    <p><strong>Instructor Name:</strong> <!--- Add your instructor name---> </p>
+    <p><strong>Course Opted:</strong> Artificial Intelligence and Machine Learning (AI/ML) </p>
+    <p><strong>Instructor Name:</strong> Ms. Rajalakshmi C </p>
 </div>
 <div align="left" style="margin: 20px; font-size: 16px;">
-    <p><strong>Duration:</strong> <!--- Durations in months---> </p>
+    <p><strong>Duration:</strong> 6 Months </p>
 
 <hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
 
 <h2 style="color:#333;"> Trainer Details </h2>
 <div align="left" style="margin: 20px; font-size: 16px;">
 
-<p><strong>Trainer Name:</strong> <!–– Add trainer name ––></p>
-<p><strong>Trainer Email ID:</strong> <!–– Add trainer email ––></p>
-<p><strong>Trainer Designation:</strong> <!–– Add designation along with company––></p>
+<p><strong>Trainer Name:</strong> Ms. Rajalakshmi C</p>
+<p><strong>Trainer Email ID:</strong> kalavathymuthu750@gmail.com</p>
+<p><strong>Trainer Designation:</strong> Data Scientist at Predigle</p>
 
 <hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
 
@@ -63,54 +63,35 @@
 
 ## Overall Learning 
 
-> _This is a placeholder. Replace the text below with your personal learning summary._
+<!-- This is a placeholder. Replace the text below with your personal learning summary
 During this course, I learned the fundamentals of web development and project design.
 I gained hands-on experience with HTML, CSS, JavaScript and strengthened my skills in 
-problem-solving, teamwork, documentation, and delivering real-world project solutions.
+problem-solving, teamwork, documentation, and delivering real-world project solutions-->
 
 
 <h2 style="color:#333;"> Projects Completed </h2>
 <div align="left" style="margin: 20px; font-size: 16px;">
 
-<p><strong><a href="#project1">Project 1:</a></strong> &lt;!-- Add project title → --&gt;</p>
+<p><strong><a href="#project1">Project:</a></strong> Enterprise Knowledge Assistant</p>
 
-<p><strong><a href="#project2">Project 2:</a></strong> &lt;!-- Add project title → --&gt;</p>
+<!--<p><strong><a href="#project2">Project 2:</a></strong> &lt;!-- Add project title → --&gt;</p>
 
 <p><strong><a href="#project3">Project 3:</a></strong> &lt;!-- Add project title → --&gt;</p>
 
-<p><em>(You can add more projects as needed)</em></p>
+<p><em>(You can add more projects as needed)</em></p>-->
 
 </div>
 
 <!-- Project 1 -->
-<h3 id="project1">Project 1: <!-- Add Project Title --></h3>
+<h3 id="project1">Project: Enterprise Knowledge Assistant</h3>
 <p>
-  This project involved designing and developing a basic functional module using the core concepts taught in the course.
-  It focused on understanding requirements, creating structured code, and implementing key features.
+  The Enterprise Knowledge Assistant (EKA) is a Retrieval-Augmented Generation (RAG) based system designed to help employees quickly find reliable information from enterprise documents such as policies, handbooks, and internal files. The project aims to reduce manual document searching while providing accurate, context-based answers.
 </p>
 <p>
-  <a href="<!-- Add link to full report -->" target="_blank"><strong>→ View Full Project Report</strong></a>
-</p>
-
-<!-- Project 2 -->
-<h3 id="project2">Project 2: <!-- Add Project Title --></h3>
-<p>
-  This project expanded on intermediate concepts and required integrating multiple components to build a more complete solution.
-  It enhanced understanding of UI/UX design, modular coding, and testing.
-</p>
-<p>
-  <a href="<!-- Add link to full report -->" target="_blank"><strong>→ View Full Project Report</strong></a>
+  <a href="https://github.com/Aayush-ops1/Enterprise-Knowledge-Assistant/blob/main/SURE%20Trust%20project%20document.docx" target="_blank"><strong>→ View Full Project Report</strong></a>
 </p>
 
-<!-- Project 3 -->
-<h3 id="project3">Project 3: <!-- Add Project Title --></h3>
-<p>
-  The final project showcased the practical application of all concepts learned throughout the course.  
-  It required planning, building, optimizing, and documenting a complete real-world project.
-</p>
-<p>
-  <a href="<!-- Add link to full report -->" target="_blank"><strong>→ View Full Project Report</strong></a>
-</p>
+
 
 <hr style="height:1px; border-top:1px solid #ccc; width:80%;" />
 
@@ -124,20 +105,20 @@ problem-solving, teamwork, documentation, and delivering real-world project solu
 
 ## **Learnings from LST and SST**
 
-<!-- add your experiences over here -->
-> _This is a placeholder. Replace the text below with your personal learning from LST and SST sessions summary._
-LST and SST sessions helped me....
+<!-- add your experiences over here --
+This is a placeholder. Replace the text below with your personal learning from LST and SST sessions summary.
+LST and SST sessions helped me....-->
 ---
 
 ## **Community Services**
 
 <!-- add descreption in your own words -->
 
-During my internship period, I participated in multiple community-oriented activities .....<!-- add descreption in your own words -->
+During my internship period, I participated in multiple community-oriented activities :<!-- add descreption in your own words -->
 
 ### **Activities Involved**
-<!-- add the location where you given -->
-- **Blood Donation** – Donated blood and supported basic assistance tasks during the camp.
+<!-- add the location where you given 
+- **Blood Donation** – Donated blood and supported basic assistance tasks during the camp.-->
   
  <!-- add the location where you have panted -->
 - **Tree Plantation Drive** – Participated by planting trees and contributing to environmental improvement.
@@ -149,7 +130,7 @@ During my internship period, I participated in multiple community-oriented activ
 
 ### **Impact / Contribution**
 
-- Helped create a supportive environment during the blood donation camp. <!-- add the location where you given -->
+<!-- Helped create a supportive environment during the blood donation camp. <!-- add the location where you given -->
 - Actively participated in promoting a greener and cleaner surroundings.
 - Offered personal assistance to elder citizens, strengthening community bonds.
 - Improved skills in communication, coordination, and social responsibility.
@@ -159,12 +140,12 @@ During my internship period, I participated in multiple community-oriented activ
 <!-- add your photos below -->
 <!-- change url below with your image urls (inside  src='')-->
 
-- These are just placeholder (sample) images <!-- remove this line -->
+<!-- These are just placeholder (sample) images <!-- remove this line -->
 
 <div align="center">
-<img src="https://media.licdn.com/dms/image/v2/D561FAQEJNBia4UCa5w/feedshare-document-images_800/B56Zm5b6SJJkAg-/1/1759752731458?e=1766016000&v=beta&t=7GABy91-0FNbir386wPdJ-Grr385JzS3tR5LQIw1CWg" alt="Community Service Photo 1" width="30%">
-<img src="https://media.licdn.com/dms/image/v2/D561FAQEJNBia4UCa5w/feedshare-document-images_800/B56Zm5b6SJJkAg-/2/1759752731458?e=1766016000&v=beta&t=6RfJQWWqlQUPcCvDnQNW7kR6yf7w-wPDsIPxum409ck" alt="Community Service Photo 2" width="30%">
-<img src="https://media.licdn.com/dms/image/v2/D561FAQEJNBia4UCa5w/feedshare-document-images_800/B56Zm5b6SJJkAg-/3/1759752731458?e=1766016000&v=beta&t=yWaunKdRdLUKBLbmM3UjRYYz-_GSCfWEQ3_R7dW0xLM" alt="Community Service Photo 3" width="30%">
+<img src="https://github.com/Aayush-ops1/Enterprise-Knowledge-Assistant/blob/main/Helping%20the%20needy.jpeg" alt="Community Service Photo 1" width="30%">
+<img src="https://github.com/Aayush-ops1/Enterprise-Knowledge-Assistant/blob/main/Planting.jpeg" alt="Community Service Photo 2" width="30%">
+<!--<img src="https://media.licdn.com/dms/image/v2/D561FAQEJNBia4UCa5w/feedshare-document-images_800/B56Zm5b6SJJkAg-/3/1759752731458?e=1766016000&v=beta&t=yWaunKdRdLUKBLbmM3UjRYYz-_GSCfWEQ3_R7dW0xLM" alt="Community Service Photo 3" width="30%">-->
 </div>
 
 ---
