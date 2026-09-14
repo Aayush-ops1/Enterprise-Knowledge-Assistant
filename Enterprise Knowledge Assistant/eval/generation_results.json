@@ -1,0 +1,1342 @@
+{
+  "config": {
+    "retrieval_k": 6,
+    "model": "openai/gpt-oss-20b",
+    "evaluation_type": "generation"
+  },
+  "summary": {
+    "questions_evaluated": 27,
+    "errors": {
+      "count": 0
+    },
+    "answerable": {
+      "count": 27,
+      "successful_generation": 25,
+      "generation_success_rate": 0.926,
+      "with_citations": 25,
+      "citation_coverage_rate": 0.926,
+      "valid_citations": 25,
+      "valid_citation_rate": 0.926,
+      "expected_section_found_in_retrieval": 24,
+      "section_retrieval_rate": 0.889,
+      "average_groundedness": 0.787
+    },
+    "unanswerable": {
+      "count": 0,
+      "correctly_refused": 0,
+      "refusal_accuracy": 0.0
+    },
+    "overall": {
+      "successful_cases": 25,
+      "success_rate": 0.926,
+      "average_groundedness_answerable": 0.787,
+      "average_latency_ms": 4128.4
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "How many days of annual leave does a full-time employee accrue per year?",
+      "answerable": true,
+      "expected_section": "1.1 Annual Leave",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "Employee Handbook > 2. Work From Home Policy > 2.1 Eligibility"
+      ],
+      "answer": "Full‑time employees accrue 18 days of annual leave per calendar year. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "1. Leave Policy",
+            "1.1 Annual Leave"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Every full-time employee accrues 18 days of annual leave per calendar year, credited at 1.5 days per completed month of service. Unused annual leave may be carried forward up to a maximum of 10 days into the following year; any balance beyond 10 days lapses on 31 March. Annual leave requests must be submitted at least 5 working days in advance through the HR portal and require manager approval."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.9,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 367.9,
+      "generation_ms": 706.1,
+      "latency_ms": 1074.1,
+      "error": null
+    },
+    {
+      "id": 2,
+      "question": "How long is paid parental leave for the primary caregiver?",
+      "answerable": true,
+      "expected_section": "1.3 Parental Leave",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 1. Leave Policy > 1.3 Parental Leave",
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave",
+        "Employee Handbook > 2. Work From Home Policy > 2.1 Eligibility"
+      ],
+      "answer": "Primary caregivers are entitled to 26 weeks of paid parental leave. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "1. Leave Policy",
+            "1.3 Parental Leave"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Primary caregivers are entitled to 26 weeks of paid parental leave, in line with the Maternity Benefit (Amendment) Act. Secondary caregivers are entitled to 2 weeks of paid paternity leave, to be availed within 6 months of the child's birth or adoption. Parental leave requests require 45 days advance notice where the leave is planned, except in cases of premature birth or medical emergency."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 352.5,
+      "generation_ms": 601.0,
+      "latency_ms": 953.5,
+      "error": null
+    },
+    {
+      "id": 3,
+      "question": "How many days of paternity leave do secondary caregivers get?",
+      "answerable": true,
+      "expected_section": "1.3 Parental Leave",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 1. Leave Policy > 1.3 Parental Leave",
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave",
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave",
+        "Employee Handbook > 2. Work From Home Policy > 2.1 Eligibility"
+      ],
+      "answer": "Secondary caregivers are entitled to 2 weeks of paid paternity leave[1].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "1. Leave Policy",
+            "1.3 Parental Leave"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Primary caregivers are entitled to 26 weeks of paid parental leave, in line with the Maternity Benefit (Amendment) Act. Secondary caregivers are entitled to 2 weeks of paid paternity leave, to be availed within 6 months of the child's birth or adoption. Parental leave requests require 45 days advance notice where the leave is planned, except in cases of premature birth or medical emergency."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.857,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 335.4,
+      "generation_ms": 683.7,
+      "latency_ms": 1019.1,
+      "error": null
+    },
+    {
+      "id": 4,
+      "question": "What is the home-office equipment allowance for eligible WFH employees?",
+      "answerable": true,
+      "expected_section": "2.2 Equipment",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 2. Work From Home Policy > 2.2 Equipment",
+        "Employee Handbook > 2. Work From Home Policy > 2.1 Eligibility",
+        "Employee Handbook > 3. Expense Reimbursement > 3.2 Meal Allowance",
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave",
+        "DUPATTA"
+      ],
+      "answer": "The one‑time home‑office setup allowance is ₹15,000 for eligible employees. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "2. Work From Home Policy",
+            "2.2 Equipment"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "The company provides a laptop and a one-time home-office setup allowance of ₹15,000 for eligible employees, covering items such as a chair, monitor, or desk. Claims must be submitted with receipts within 60 days of the WFH approval date."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.75,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 602.0,
+      "generation_ms": 610.7,
+      "latency_ms": 1212.7,
+      "error": null
+    },
+    {
+      "id": 5,
+      "question": "What is the reimbursement rate per kilometre for personal vehicle travel?",
+      "answerable": true,
+      "expected_section": "3.1 Travel Expenses",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 3. Expense Reimbursement > 3.1 Travel Expenses",
+        "Employee Handbook > 3. Expense Reimbursement > 3.2 Meal Allowance",
+        "DUPATTA",
+        "SAREE",
+        "BLOUSE PIECE",
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds"
+      ],
+      "answer": "₹12 per kilometre for employees using personal vehicles [1].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "3. Expense Reimbursement",
+            "3.1 Travel Expenses"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Domestic travel for business purposes is reimbursed at actual cost for economy-class airfare or AC-2 tier train travel. Local conveyance is reimbursed at ₹12 per kilometre for employees using personal vehicles, or at actual metered fare for cabs/auto-rickshaws booked through approved aggregators."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 632.7,
+      "generation_ms": 464.8,
+      "latency_ms": 1097.6,
+      "error": null
+    },
+    {
+      "id": 6,
+      "question": "Above what expense amount is finance controller sign-off required?",
+      "answerable": true,
+      "expected_section": "3.3 Approval Thresholds",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds",
+        "Capital Expenditure",
+        "Vendor Payment Terms",
+        "Procurement",
+        "BLOUSE PIECE",
+        "SAREE"
+      ],
+      "answer": "Finance controller sign‑off is required for expenses above ₹50,000. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "3. Expense Reimbursement",
+            "3.3 Approval Thresholds"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Expenses under ₹5,000 require only manager approval. Expenses between ₹5,000 and ₹50,000 require approval from both the manager and the department head. Expenses above ₹50,000 require additional finance controller sign-off before reimbursement is processed."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.875,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 648.0,
+      "generation_ms": 465.6,
+      "latency_ms": 1113.6,
+      "error": null
+    },
+    {
+      "id": 7,
+      "question": "How long after leaving the company does confidentiality still apply?",
+      "answerable": true,
+      "expected_section": "4.2 Confidentiality",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 4. Code of Conduct > 4.2 Confidentiality",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "5. VENDOR ACCESS",
+        "Employee Handbook > 5. Termination and Notice > 5.1 Resignation Notice"
+      ],
+      "answer": "Confidentiality obligations remain in effect for 2 years after an employee separates from the company. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "4. Code of Conduct",
+            "4.2 Confidentiality"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "All employees are bound by confidentiality obligations covering proprietary business information, client data, and unreleased product plans, both during employment and for a period of 2 years after separation from the company."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.636,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 459.4,
+      "generation_ms": 584.0,
+      "latency_ms": 1043.4,
+      "error": null
+    },
+    {
+      "id": 8,
+      "question": "How much notice must a manager give when resigning?",
+      "answerable": true,
+      "expected_section": "5.1 Resignation Notice",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 5. Termination and Notice > 5.1 Resignation Notice",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave",
+        "Employee Handbook > 2. Work From Home Policy > 2.1 Eligibility",
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds"
+      ],
+      "answer": "A manager must give 60 days' notice when resigning. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "5. Termination and Notice",
+            "5.1 Resignation Notice"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Employees below the Manager level must serve 30 days' notice upon resignation. Employees at Manager level and above must serve 60 days' notice. The company may, at its discretion, offer pay in lieu of the notice period."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.625,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 399.4,
+      "generation_ms": 532.8,
+      "latency_ms": 932.3,
+      "error": null
+    },
+    {
+      "id": 9,
+      "question": "What is the minimum password length required for company systems?",
+      "answerable": true,
+      "expected_section": "1. PASSWORD REQUIREMENTS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "1. PASSWORD REQUIREMENTS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "2. DEVICE MANAGEMENT",
+        "6. REMOTE ACCESS",
+        "3. DATA CLASSIFICATION",
+        "4. DATA HANDLING BY THIRD PARTIES"
+      ],
+      "answer": "The minimum password length required for company systems is 12 characters[1].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "it_security_policy",
+          "section_trail": [
+            "1. PASSWORD REQUIREMENTS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "All employee passwords for company systems must be at least 12 characters long and include a mix of uppercase, lowercase, numbers, and special characters. Passwords must be rotated every 90 days and may not reuse any of the last 5 passwords used. Multi-factor authentication is mandatory for all systems classified as containing confidential or restricted data."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.714,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 661.7,
+      "generation_ms": 668.5,
+      "latency_ms": 1330.2,
+      "error": null
+    },
+    {
+      "id": 10,
+      "question": "Can personal devices access the internal code repository?",
+      "answerable": true,
+      "expected_section": "2. DEVICE MANAGEMENT",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "2. DEVICE MANAGEMENT",
+        "5. VENDOR ACCESS",
+        "6. REMOTE ACCESS",
+        "3. DATA CLASSIFICATION",
+        "4. INCIDENT REPORTING",
+        "4. DATA HANDLING BY THIRD PARTIES"
+      ],
+      "answer": "No. Personal devices are restricted to company email and calendar only; they may not access internal systems such as the code repository. This is enforced by the BYOD policy and MDM enrollment requirements. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "it_security_policy",
+          "section_trail": [
+            "2. DEVICE MANAGEMENT"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Company-issued laptops must have full-disk encryption enabled and endpoint protection software installed before being released to an employee. Personal devices (BYOD) may only access company email and calendar, never internal systems or the code repository, and must be enrolled in the mobile device management (MDM) platform."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.75,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 422.1,
+      "generation_ms": 723.1,
+      "latency_ms": 1145.2,
+      "error": null
+    },
+    {
+      "id": 11,
+      "question": "Within how many hours must a suspected phishing email be reported?",
+      "answerable": true,
+      "expected_section": "4. INCIDENT REPORTING",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "4. INCIDENT REPORTING",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "Employee Handbook > 2. Work From Home Policy > 2.2 Equipment",
+        "1. PASSWORD REQUIREMENTS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave"
+      ],
+      "answer": "A suspected phishing email must be reported within 4 hours of discovery. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "it_security_policy",
+          "section_trail": [
+            "4. INCIDENT REPORTING"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Any suspected security incident, including phishing emails, lost devices, or unauthorized access, must be reported to the Security team within 4 hours of discovery via the security@company incident channel. Failure to report a known incident within 24 hours is treated as a policy violation subject to disciplinary review."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 417.2,
+      "generation_ms": 1713.5,
+      "latency_ms": 2130.8,
+      "error": null
+    },
+    {
+      "id": 12,
+      "question": "How long after contract termination is vendor access automatically revoked?",
+      "answerable": true,
+      "expected_section": "5. VENDOR ACCESS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "5. VENDOR ACCESS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "4. DATA HANDLING BY THIRD PARTIES",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "Vendor Payment Terms",
+        "Employee Handbook > 4. Code of Conduct > 4.2 Confidentiality"
+      ],
+      "answer": "Vendor access is automatically revoked 30 days after contract termination, unless the security team explicitly extends it. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "it_security_policy",
+          "section_trail": [
+            "5. VENDOR ACCESS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Third-party vendors requiring access to internal systems must go through a security review and sign a data processing agreement before provisioning. Vendor access is reviewed quarterly and automatically revoked 30 days after contract termination unless explicitly extended by the security team."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.933,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 379.4,
+      "generation_ms": 5521.5,
+      "latency_ms": 5900.9,
+      "error": null
+    },
+    {
+      "id": 13,
+      "question": "How many vendor quotations are required for a purchase above 1 lakh rupees?",
+      "answerable": true,
+      "expected_section": "Procurement",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Procurement",
+        "Vendor Payment Terms",
+        "SAREE",
+        "DUPATTA",
+        "BLOUSE PIECE",
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds"
+      ],
+      "answer": "Three vendor quotations are required for a purchase above ₹1 00 000 ₹. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "finance_policy",
+          "section_trail": [
+            "Procurement"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "All purchase requisitions above ₹1,00,000 require a minimum of three vendor quotations before approval. Requisitions below this threshold may proceed with a single quotation if the vendor is on the pre-approved panel maintained by Procurement.\nEmergency procurement, defined as a purchase required to prevent operational downtime, may bypass the multi-quote requirement with written justification from the department head, subject to post-facto audit within 15 days."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 723.5,
+      "generation_ms": 4738.9,
+      "latency_ms": 5462.4,
+      "error": null
+    },
+    {
+      "id": 14,
+      "question": "Who must approve a capital expenditure proposal of 30 lakh rupees?",
+      "answerable": true,
+      "expected_section": "Capital Expenditure",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Capital Expenditure",
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds",
+        "Employee Handbook > 2. Work From Home Policy > 2.2 Equipment",
+        "Procurement",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "Employee Handbook > 3. Expense Reimbursement > 3.2 Meal Allowance"
+      ],
+      "answer": "The proposal must be approved by the Investment Committee, which is required for capital expenditure proposals exceeding ₹25,00,000. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "finance_policy",
+          "section_trail": [
+            "Capital Expenditure"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Capital expenditure proposals exceeding ₹25,00,000 require Investment Committee approval and a documented payback period analysis. Proposals between ₹5,00,000 and ₹25,00,000 require CFO sign-off. Proposals below ₹5,00,000 can be approved by the relevant Vertical Head."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.923,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 769.5,
+      "generation_ms": 4447.4,
+      "latency_ms": 5217.0,
+      "error": null
+    },
+    {
+      "id": 15,
+      "question": "What are the standard vendor payment terms?",
+      "answerable": true,
+      "expected_section": "Vendor Payment Terms",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Vendor Payment Terms",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "Procurement",
+        "5. VENDOR ACCESS",
+        "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "Employee Handbook > 4. Code of Conduct > 4.1 Conflict of Interest"
+      ],
+      "answer": "Standard vendor payment terms are net 45 days from invoice receipt, subject to satisfactory goods/service verification. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "finance_policy",
+          "section_trail": [
+            "Vendor Payment Terms"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Standard vendor payment terms are net 45 days from invoice receipt, subject to satisfactory goods/service verification. Strategic vendors with an active master services agreement may be extended net 60 terms upon Finance approval.\nApproval Tier | Threshold | Approver\nTier 1 | Below ₹5,00,000 | Vertical Head\nTier 2 | ₹5,00,000 - ₹25,00,000 | CFO\nTier 3 | Above ₹25,00,000 | Investment Committee"
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 614.4,
+      "generation_ms": 6977.2,
+      "latency_ms": 7591.6,
+      "error": null
+    },
+    {
+      "id": 16,
+      "question": "What is the company's policy on employee stock options?",
+      "answerable": true,
+      "expected_section": null,
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 4. Code of Conduct > 4.1 Conflict of Interest",
+        "Employee Handbook > 4. Code of Conduct > 4.2 Confidentiality",
+        "Employee Handbook > 5. Termination and Notice > 5.1 Resignation Notice",
+        "Employee Handbook > 2. Work From Home Policy > 2.2 Equipment",
+        "2. DEVICE MANAGEMENT",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY"
+      ],
+      "answer": "The uploaded documents do not cover the company’s policy on employee stock options.",
+      "citations": [],
+      "citation_check": {
+        "markers": [],
+        "valid_markers": [],
+        "invalid_markers": [],
+        "has_citations": false,
+        "all_citations_valid": false
+      },
+      "groundedness": 0.333,
+      "refused": false,
+      "refusal_language": true,
+      "generation_success": false,
+      "section_found_in_retrieval": false,
+      "retrieval_ms": 800.6,
+      "generation_ms": 4643.7,
+      "latency_ms": 5444.2,
+      "error": null
+    },
+    {
+      "id": 17,
+      "question": "What is the maternity leave policy in the United States office?",
+      "answerable": true,
+      "expected_section": null,
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 1. Leave Policy > 1.3 Parental Leave",
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave",
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY"
+      ],
+      "answer": "Maternity leave in the U.S. office provides 26 weeks of paid parental leave for primary caregivers, in line with the Maternity Benefit (Amendment) Act[1].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "1. Leave Policy",
+            "1.3 Parental Leave"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Primary caregivers are entitled to 26 weeks of paid parental leave, in line with the Maternity Benefit (Amendment) Act. Secondary caregivers are entitled to 2 weeks of paid paternity leave, to be availed within 6 months of the child's birth or adoption. Parental leave requests require 45 days advance notice where the leave is planned, except in cases of premature birth or medical emergency."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.714,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": false,
+      "retrieval_ms": 878.2,
+      "generation_ms": 5655.5,
+      "latency_ms": 6533.7,
+      "error": null
+    },
+    {
+      "id": 18,
+      "question": "Is remote access allowed without MFA if using a company laptop?",
+      "answerable": true,
+      "expected_section": "6. REMOTE ACCESS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "6. REMOTE ACCESS",
+        "2. DEVICE MANAGEMENT",
+        "5. VENDOR ACCESS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "4. INCIDENT REPORTING",
+        "3. DATA CLASSIFICATION"
+      ],
+      "answer": "No—remote access requires MFA, even when using a company‑issued laptop[1].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "it_security_policy",
+          "section_trail": [
+            "6. REMOTE ACCESS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Remote access to internal systems requires connection through the company VPN with MFA enabled. Split-tunneling is disabled by default. Access logs are retained for 180 days for audit purposes."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.333,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 607.9,
+      "generation_ms": 5934.3,
+      "latency_ms": 6542.2,
+      "error": null
+    },
+    {
+      "id": 19,
+      "question": "If a close relative passes away, how much paid time off can I take, and do I need to ask in advance?",
+      "answerable": true,
+      "expected_section": "1.4 Bereavement Leave",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 1. Leave Policy > 1.4 Bereavement Leave",
+        "Employee Handbook > 1. Leave Policy > 1.3 Parental Leave",
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "Employee Handbook > 5. Termination and Notice > 5.1 Resignation Notice",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave"
+      ],
+      "answer": "Employees can take up to 5 days of paid bereavement leave if the deceased is an immediate family member (spouse, child, parent, or sibling), or up to 2 days if they are an extended family member. No advance notice is required; you just need to inform HR as soon as reasonably possible. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "1. Leave Policy",
+            "1.4 Bereavement Leave"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Employees may take up to 5 days of paid bereavement leave upon the death of an immediate family member (spouse, child, parent, or sibling), and up to 2 days for extended family. No advance notice is required; HR should be informed as soon as reasonably possible."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.821,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 697.6,
+      "generation_ms": 6789.6,
+      "latency_ms": 7487.2,
+      "error": null
+    },
+    {
+      "id": 20,
+      "question": "What is the AC-2 tier reimbursement rule for domestic business trips?",
+      "answerable": true,
+      "expected_section": "3.1 Travel Expenses",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 3. Expense Reimbursement > 3.1 Travel Expenses",
+        "Employee Handbook > 3. Expense Reimbursement > 3.2 Meal Allowance",
+        "Employee Handbook > 3. Expense Reimbursement > 3.3 Approval Thresholds",
+        "Vendor Payment Terms",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "2. CONTRACTOR EXPENSE CLAIMS"
+      ],
+      "answer": "Domestic business trips: AC‑2 tier train travel is reimbursed at actual cost. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "3. Expense Reimbursement",
+            "3.1 Travel Expenses"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Domestic travel for business purposes is reimbursed at actual cost for economy-class airfare or AC-2 tier train travel. Local conveyance is reimbursed at ₹12 per kilometre for employees using personal vehicles, or at actual metered fare for cabs/auto-rickshaws booked through approved aggregators."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.818,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 2268.6,
+      "generation_ms": 3765.8,
+      "latency_ms": 6034.4,
+      "error": null
+    },
+    {
+      "id": 21,
+      "question": "What's the MDM enrollment rule for BYOD devices?",
+      "answerable": true,
+      "expected_section": "2. DEVICE MANAGEMENT",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "2. DEVICE MANAGEMENT",
+        "5. VENDOR ACCESS",
+        "DUPATTA",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "SAREE",
+        "Employee Handbook > 2. Work From Home Policy > 2.2 Equipment"
+      ],
+      "answer": "BYOD devices must be enrolled in the mobile device management (MDM) platform. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "it_security_policy",
+          "section_trail": [
+            "2. DEVICE MANAGEMENT"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Company-issued laptops must have full-disk encryption enabled and endpoint protection software installed before being released to an employee. Personal devices (BYOD) may only access company email and calendar, never internal systems or the code repository, and must be enrolled in the mobile device management (MDM) platform."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 561.5,
+      "generation_ms": 4918.5,
+      "latency_ms": 5480.0,
+      "error": null
+    },
+    {
+      "id": 22,
+      "question": "Do employees traveling abroad get a fixed daily food allowance without needing to keep receipts?",
+      "answerable": true,
+      "expected_section": "3.2 Meal Allowance",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 3. Expense Reimbursement > 3.2 Meal Allowance",
+        "Employee Handbook > 2. Work From Home Policy > 2.2 Equipment",
+        "Employee Handbook > 3. Expense Reimbursement > 3.1 Travel Expenses",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "Employee Handbook > 1. Leave Policy > 1.2 Sick Leave",
+        "Employee Handbook > 1. Leave Policy > 1.1 Annual Leave"
+      ],
+      "answer": "Yes – employees traveling abroad receive a fixed per‑diem meal allowance of USD 60 per day, and receipts are not required up to that cap [1].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "3. Expense Reimbursement",
+            "3.2 Meal Allowance"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Employees travelling for business are entitled to a per-diem meal allowance of ₹1,200 per day within India and USD 60 per day for international travel, without the need for itemized receipts up to these caps."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.588,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 923.4,
+      "generation_ms": 5916.7,
+      "latency_ms": 6840.1,
+      "error": null
+    },
+    {
+      "id": 23,
+      "question": "How often is the master services agreement audited for pricing compliance?",
+      "answerable": true,
+      "expected_section": null,
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Vendor Payment Terms",
+        "5. VENDOR ACCESS",
+        "4. DATA HANDLING BY THIRD PARTIES",
+        "Procurement",
+        "6. REMOTE ACCESS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS"
+      ],
+      "answer": "The uploaded documents do not contain information about how often the master services agreement is audited for pricing compliance.",
+      "citations": [],
+      "citation_check": {
+        "markers": [],
+        "valid_markers": [],
+        "invalid_markers": [],
+        "has_citations": false,
+        "all_citations_valid": false
+      },
+      "groundedness": 0.214,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": false,
+      "section_found_in_retrieval": false,
+      "retrieval_ms": 651.7,
+      "generation_ms": 5697.9,
+      "latency_ms": 6349.6,
+      "error": null
+    },
+    {
+      "id": 24,
+      "question": "How often are contractor passwords rotated?",
+      "answerable": true,
+      "expected_section": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "1. PASSWORD REQUIREMENTS",
+        "4. DATA HANDLING BY THIRD PARTIES",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY"
+      ],
+      "answer": "Contractor passwords are rotated every 30 days. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "contractor_code_of_conduct",
+          "section_trail": [
+            "1. VENDOR PASSWORD AND SYSTEM ACCESS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Contractors granted temporary system access must use credentials that meet the same 12-character minimum as employee accounts, but contractor passwords are rotated every 30 days rather than 90, given the higher risk profile of external access. Contractor accounts are automatically disabled 7 days after project close-out."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 1.0,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 1162.1,
+      "generation_ms": 4741.2,
+      "latency_ms": 5903.3,
+      "error": null
+    },
+    {
+      "id": 25,
+      "question": "How many days after project close-out is a contractor's account disabled?",
+      "answerable": true,
+      "expected_section": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "4. DATA HANDLING BY THIRD PARTIES",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "5. VENDOR ACCESS",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement"
+      ],
+      "answer": "The contractor’s account is automatically disabled 7 days after project close‑out. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "contractor_code_of_conduct",
+          "section_trail": [
+            "1. VENDOR PASSWORD AND SYSTEM ACCESS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Contractors granted temporary system access must use credentials that meet the same 12-character minimum as employee accounts, but contractor passwords are rotated every 30 days rather than 90, given the higher risk profile of external access. Contractor accounts are automatically disabled 7 days after project close-out."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.778,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 1741.2,
+      "generation_ms": 4706.0,
+      "latency_ms": 6447.1,
+      "error": null
+    },
+    {
+      "id": 26,
+      "question": "On what payment terms are contractor expense claims settled?",
+      "answerable": true,
+      "expected_section": "2. CONTRACTOR EXPENSE CLAIMS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "Employee Handbook > 5. Termination and Notice > 5.2 Full and Final Settlement",
+        "Vendor Payment Terms",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS"
+      ],
+      "answer": "Contractor expense claims are settled net 30 days from the date of submission. [1]",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "contractor_code_of_conduct",
+          "section_trail": [
+            "2. CONTRACTOR EXPENSE CLAIMS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Contractors submitting expense claims for approved travel must use the vendor portal, not the employee expense system. Claims are settled net 30 days from submission, faster than the standard net 45 vendor payment terms, because contractor invoices are typically for smaller amounts and reviewed weekly rather than monthly."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1
+        ],
+        "valid_markers": [
+          1
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.9,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 5707.8,
+      "generation_ms": 841.4,
+      "latency_ms": 6549.2,
+      "error": null
+    },
+    {
+      "id": 27,
+      "question": "Do contractors need to disclose conflicts of interest annually like employees do?",
+      "answerable": true,
+      "expected_section": "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+      "retrieved_chunks": 6,
+      "retrieved_sections": [
+        "Employee Handbook > 4. Code of Conduct > 4.1 Conflict of Interest",
+        "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "3. CONTRACTOR LEAVE AND AVAILABILITY",
+        "4. DATA HANDLING BY THIRD PARTIES",
+        "2. CONTRACTOR EXPENSE CLAIMS",
+        "1. VENDOR PASSWORD AND SYSTEM ACCESS"
+      ],
+      "answer": "Contractors do not disclose conflicts of interest annually. They must reveal any ownership stake or advisory role with a competing vendor before engagement begins, unlike employees who file annual disclosures[1][2].",
+      "citations": [
+        {
+          "marker": 1,
+          "title": "employee_handbook",
+          "section_trail": [
+            "Employee Handbook",
+            "4. Code of Conduct",
+            "4.1 Conflict of Interest"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Employees must disclose any outside business interest, board position, or family relationship with a vendor or competitor that could reasonably be seen as a conflict of interest. Disclosures are made annually via the compliance portal and reviewed by the Ethics Committee."
+        },
+        {
+          "marker": 2,
+          "title": "contractor_code_of_conduct",
+          "section_trail": [
+            "5. CONFLICT OF INTEREST FOR CONTRACTORS"
+          ],
+          "page_start": null,
+          "page_end": null,
+          "text": "Contractors and their immediate family must disclose any ownership stake or advisory role with a competing vendor before engagement begins, not annually as with employees, since contractor engagements are typically shorter than a full year."
+        }
+      ],
+      "citation_check": {
+        "markers": [
+          1,
+          2
+        ],
+        "valid_markers": [
+          1,
+          2
+        ],
+        "invalid_markers": [],
+        "has_citations": true,
+        "all_citations_valid": true
+      },
+      "groundedness": 0.8,
+      "refused": false,
+      "refusal_language": false,
+      "generation_success": true,
+      "section_found_in_retrieval": true,
+      "retrieval_ms": 2929.8,
+      "generation_ms": 1701.6,
+      "latency_ms": 4631.4,
+      "error": null
+    }
+  ]
+}

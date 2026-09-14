@@ -1,0 +1,2 @@
+Codebuff queue test A.
+This is file A for multi-upload.

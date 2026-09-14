@@ -1,0 +1,698 @@
+{
+  "dense": {
+    "mode": "dense",
+    "recall_at_k": 1.0,
+    "mrr": 1.0,
+    "answerable_n": 24,
+    "unanswerable_n": 3,
+    "details": [
+      {
+        "id": "q1",
+        "question": "How many days of annual leave does a full-time employee accrue per year?",
+        "expected": "1.1 Annual Leave",
+        "rank": 1
+      },
+      {
+        "id": "q2",
+        "question": "How long is paid parental leave for the primary caregiver?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q3",
+        "question": "How many days of paternity leave do secondary caregivers get?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is the home-office equipment allowance for eligible WFH employees?",
+        "expected": "2.2 Equipment",
+        "rank": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is the reimbursement rate per kilometre for personal vehicle travel?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q6",
+        "question": "Above what expense amount is finance controller sign-off required?",
+        "expected": "3.3 Approval Thresholds",
+        "rank": 1
+      },
+      {
+        "id": "q7",
+        "question": "How long after leaving the company does confidentiality still apply?",
+        "expected": "4.2 Confidentiality",
+        "rank": 1
+      },
+      {
+        "id": "q8",
+        "question": "How much notice must a manager give when resigning?",
+        "expected": "5.1 Resignation Notice",
+        "rank": 1
+      },
+      {
+        "id": "q9",
+        "question": "What is the minimum password length required for company systems?",
+        "expected": "1. PASSWORD REQUIREMENTS",
+        "rank": 1
+      },
+      {
+        "id": "q10",
+        "question": "Can personal devices access the internal code repository?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q11",
+        "question": "Within how many hours must a suspected phishing email be reported?",
+        "expected": "4. INCIDENT REPORTING",
+        "rank": 1
+      },
+      {
+        "id": "q12",
+        "question": "How long after contract termination is vendor access automatically revoked?",
+        "expected": "5. VENDOR ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q13",
+        "question": "How many vendor quotations are required for a purchase above 1 lakh rupees?",
+        "expected": "Procurement",
+        "rank": 1
+      },
+      {
+        "id": "q14",
+        "question": "Who must approve a capital expenditure proposal of 30 lakh rupees?",
+        "expected": "Capital Expenditure",
+        "rank": 1
+      },
+      {
+        "id": "q15",
+        "question": "What are the standard vendor payment terms?",
+        "expected": "Vendor Payment Terms",
+        "rank": 1
+      },
+      {
+        "id": "q16",
+        "question": "What is the company's policy on employee stock options?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q17",
+        "question": "What is the maternity leave policy in the United States office?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q18",
+        "question": "Is remote access allowed without MFA if using a company laptop?",
+        "expected": "6. REMOTE ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q19",
+        "question": "If a close relative passes away, how much paid time off can I take, and do I need to ask in advance?",
+        "expected": "1.4 Bereavement Leave",
+        "rank": 1
+      },
+      {
+        "id": "q20",
+        "question": "What is the AC-2 tier reimbursement rule for domestic business trips?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q21",
+        "question": "What's the MDM enrollment rule for BYOD devices?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q22",
+        "question": "Do employees traveling abroad get a fixed daily food allowance without needing to keep receipts?",
+        "expected": "3.2 Meal Allowance",
+        "rank": 1
+      },
+      {
+        "id": "q23",
+        "question": "How often is the master services agreement audited for pricing compliance?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q24",
+        "question": "How often are contractor passwords rotated?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q25",
+        "question": "How many days after project close-out is a contractor's account disabled?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q26",
+        "question": "On what payment terms are contractor expense claims settled?",
+        "expected": "2. CONTRACTOR EXPENSE CLAIMS",
+        "rank": 1
+      },
+      {
+        "id": "q27",
+        "question": "Do contractors need to disclose conflicts of interest annually like employees do?",
+        "expected": "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "rank": 1
+      }
+    ]
+  },
+  "bm25": {
+    "mode": "bm25",
+    "recall_at_k": 1.0,
+    "mrr": 1.0,
+    "answerable_n": 24,
+    "unanswerable_n": 3,
+    "details": [
+      {
+        "id": "q1",
+        "question": "How many days of annual leave does a full-time employee accrue per year?",
+        "expected": "1.1 Annual Leave",
+        "rank": 1
+      },
+      {
+        "id": "q2",
+        "question": "How long is paid parental leave for the primary caregiver?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q3",
+        "question": "How many days of paternity leave do secondary caregivers get?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is the home-office equipment allowance for eligible WFH employees?",
+        "expected": "2.2 Equipment",
+        "rank": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is the reimbursement rate per kilometre for personal vehicle travel?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q6",
+        "question": "Above what expense amount is finance controller sign-off required?",
+        "expected": "3.3 Approval Thresholds",
+        "rank": 1
+      },
+      {
+        "id": "q7",
+        "question": "How long after leaving the company does confidentiality still apply?",
+        "expected": "4.2 Confidentiality",
+        "rank": 1
+      },
+      {
+        "id": "q8",
+        "question": "How much notice must a manager give when resigning?",
+        "expected": "5.1 Resignation Notice",
+        "rank": 1
+      },
+      {
+        "id": "q9",
+        "question": "What is the minimum password length required for company systems?",
+        "expected": "1. PASSWORD REQUIREMENTS",
+        "rank": 1
+      },
+      {
+        "id": "q10",
+        "question": "Can personal devices access the internal code repository?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q11",
+        "question": "Within how many hours must a suspected phishing email be reported?",
+        "expected": "4. INCIDENT REPORTING",
+        "rank": 1
+      },
+      {
+        "id": "q12",
+        "question": "How long after contract termination is vendor access automatically revoked?",
+        "expected": "5. VENDOR ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q13",
+        "question": "How many vendor quotations are required for a purchase above 1 lakh rupees?",
+        "expected": "Procurement",
+        "rank": 1
+      },
+      {
+        "id": "q14",
+        "question": "Who must approve a capital expenditure proposal of 30 lakh rupees?",
+        "expected": "Capital Expenditure",
+        "rank": 1
+      },
+      {
+        "id": "q15",
+        "question": "What are the standard vendor payment terms?",
+        "expected": "Vendor Payment Terms",
+        "rank": 1
+      },
+      {
+        "id": "q16",
+        "question": "What is the company's policy on employee stock options?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q17",
+        "question": "What is the maternity leave policy in the United States office?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q18",
+        "question": "Is remote access allowed without MFA if using a company laptop?",
+        "expected": "6. REMOTE ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q19",
+        "question": "If a close relative passes away, how much paid time off can I take, and do I need to ask in advance?",
+        "expected": "1.4 Bereavement Leave",
+        "rank": 1
+      },
+      {
+        "id": "q20",
+        "question": "What is the AC-2 tier reimbursement rule for domestic business trips?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q21",
+        "question": "What's the MDM enrollment rule for BYOD devices?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q22",
+        "question": "Do employees traveling abroad get a fixed daily food allowance without needing to keep receipts?",
+        "expected": "3.2 Meal Allowance",
+        "rank": 1
+      },
+      {
+        "id": "q23",
+        "question": "How often is the master services agreement audited for pricing compliance?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q24",
+        "question": "How often are contractor passwords rotated?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q25",
+        "question": "How many days after project close-out is a contractor's account disabled?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q26",
+        "question": "On what payment terms are contractor expense claims settled?",
+        "expected": "2. CONTRACTOR EXPENSE CLAIMS",
+        "rank": 1
+      },
+      {
+        "id": "q27",
+        "question": "Do contractors need to disclose conflicts of interest annually like employees do?",
+        "expected": "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "rank": 1
+      }
+    ]
+  },
+  "hybrid": {
+    "mode": "hybrid",
+    "recall_at_k": 1.0,
+    "mrr": 1.0,
+    "answerable_n": 24,
+    "unanswerable_n": 3,
+    "details": [
+      {
+        "id": "q1",
+        "question": "How many days of annual leave does a full-time employee accrue per year?",
+        "expected": "1.1 Annual Leave",
+        "rank": 1
+      },
+      {
+        "id": "q2",
+        "question": "How long is paid parental leave for the primary caregiver?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q3",
+        "question": "How many days of paternity leave do secondary caregivers get?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is the home-office equipment allowance for eligible WFH employees?",
+        "expected": "2.2 Equipment",
+        "rank": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is the reimbursement rate per kilometre for personal vehicle travel?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q6",
+        "question": "Above what expense amount is finance controller sign-off required?",
+        "expected": "3.3 Approval Thresholds",
+        "rank": 1
+      },
+      {
+        "id": "q7",
+        "question": "How long after leaving the company does confidentiality still apply?",
+        "expected": "4.2 Confidentiality",
+        "rank": 1
+      },
+      {
+        "id": "q8",
+        "question": "How much notice must a manager give when resigning?",
+        "expected": "5.1 Resignation Notice",
+        "rank": 1
+      },
+      {
+        "id": "q9",
+        "question": "What is the minimum password length required for company systems?",
+        "expected": "1. PASSWORD REQUIREMENTS",
+        "rank": 1
+      },
+      {
+        "id": "q10",
+        "question": "Can personal devices access the internal code repository?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q11",
+        "question": "Within how many hours must a suspected phishing email be reported?",
+        "expected": "4. INCIDENT REPORTING",
+        "rank": 1
+      },
+      {
+        "id": "q12",
+        "question": "How long after contract termination is vendor access automatically revoked?",
+        "expected": "5. VENDOR ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q13",
+        "question": "How many vendor quotations are required for a purchase above 1 lakh rupees?",
+        "expected": "Procurement",
+        "rank": 1
+      },
+      {
+        "id": "q14",
+        "question": "Who must approve a capital expenditure proposal of 30 lakh rupees?",
+        "expected": "Capital Expenditure",
+        "rank": 1
+      },
+      {
+        "id": "q15",
+        "question": "What are the standard vendor payment terms?",
+        "expected": "Vendor Payment Terms",
+        "rank": 1
+      },
+      {
+        "id": "q16",
+        "question": "What is the company's policy on employee stock options?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q17",
+        "question": "What is the maternity leave policy in the United States office?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q18",
+        "question": "Is remote access allowed without MFA if using a company laptop?",
+        "expected": "6. REMOTE ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q19",
+        "question": "If a close relative passes away, how much paid time off can I take, and do I need to ask in advance?",
+        "expected": "1.4 Bereavement Leave",
+        "rank": 1
+      },
+      {
+        "id": "q20",
+        "question": "What is the AC-2 tier reimbursement rule for domestic business trips?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q21",
+        "question": "What's the MDM enrollment rule for BYOD devices?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q22",
+        "question": "Do employees traveling abroad get a fixed daily food allowance without needing to keep receipts?",
+        "expected": "3.2 Meal Allowance",
+        "rank": 1
+      },
+      {
+        "id": "q23",
+        "question": "How often is the master services agreement audited for pricing compliance?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q24",
+        "question": "How often are contractor passwords rotated?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q25",
+        "question": "How many days after project close-out is a contractor's account disabled?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q26",
+        "question": "On what payment terms are contractor expense claims settled?",
+        "expected": "2. CONTRACTOR EXPENSE CLAIMS",
+        "rank": 1
+      },
+      {
+        "id": "q27",
+        "question": "Do contractors need to disclose conflicts of interest annually like employees do?",
+        "expected": "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "rank": 1
+      }
+    ]
+  },
+  "hybrid_rerank": {
+    "mode": "hybrid_rerank",
+    "recall_at_k": 1.0,
+    "mrr": 0.979,
+    "answerable_n": 24,
+    "unanswerable_n": 3,
+    "details": [
+      {
+        "id": "q1",
+        "question": "How many days of annual leave does a full-time employee accrue per year?",
+        "expected": "1.1 Annual Leave",
+        "rank": 1
+      },
+      {
+        "id": "q2",
+        "question": "How long is paid parental leave for the primary caregiver?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q3",
+        "question": "How many days of paternity leave do secondary caregivers get?",
+        "expected": "1.3 Parental Leave",
+        "rank": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is the home-office equipment allowance for eligible WFH employees?",
+        "expected": "2.2 Equipment",
+        "rank": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is the reimbursement rate per kilometre for personal vehicle travel?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q6",
+        "question": "Above what expense amount is finance controller sign-off required?",
+        "expected": "3.3 Approval Thresholds",
+        "rank": 1
+      },
+      {
+        "id": "q7",
+        "question": "How long after leaving the company does confidentiality still apply?",
+        "expected": "4.2 Confidentiality",
+        "rank": 1
+      },
+      {
+        "id": "q8",
+        "question": "How much notice must a manager give when resigning?",
+        "expected": "5.1 Resignation Notice",
+        "rank": 1
+      },
+      {
+        "id": "q9",
+        "question": "What is the minimum password length required for company systems?",
+        "expected": "1. PASSWORD REQUIREMENTS",
+        "rank": 1
+      },
+      {
+        "id": "q10",
+        "question": "Can personal devices access the internal code repository?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q11",
+        "question": "Within how many hours must a suspected phishing email be reported?",
+        "expected": "4. INCIDENT REPORTING",
+        "rank": 1
+      },
+      {
+        "id": "q12",
+        "question": "How long after contract termination is vendor access automatically revoked?",
+        "expected": "5. VENDOR ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q13",
+        "question": "How many vendor quotations are required for a purchase above 1 lakh rupees?",
+        "expected": "Procurement",
+        "rank": 1
+      },
+      {
+        "id": "q14",
+        "question": "Who must approve a capital expenditure proposal of 30 lakh rupees?",
+        "expected": "Capital Expenditure",
+        "rank": 1
+      },
+      {
+        "id": "q15",
+        "question": "What are the standard vendor payment terms?",
+        "expected": "Vendor Payment Terms",
+        "rank": 1
+      },
+      {
+        "id": "q16",
+        "question": "What is the company's policy on employee stock options?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q17",
+        "question": "What is the maternity leave policy in the United States office?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q18",
+        "question": "Is remote access allowed without MFA if using a company laptop?",
+        "expected": "6. REMOTE ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q19",
+        "question": "If a close relative passes away, how much paid time off can I take, and do I need to ask in advance?",
+        "expected": "1.4 Bereavement Leave",
+        "rank": 1
+      },
+      {
+        "id": "q20",
+        "question": "What is the AC-2 tier reimbursement rule for domestic business trips?",
+        "expected": "3.1 Travel Expenses",
+        "rank": 1
+      },
+      {
+        "id": "q21",
+        "question": "What's the MDM enrollment rule for BYOD devices?",
+        "expected": "2. DEVICE MANAGEMENT",
+        "rank": 1
+      },
+      {
+        "id": "q22",
+        "question": "Do employees traveling abroad get a fixed daily food allowance without needing to keep receipts?",
+        "expected": "3.2 Meal Allowance",
+        "rank": 1
+      },
+      {
+        "id": "q23",
+        "question": "How often is the master services agreement audited for pricing compliance?",
+        "expected": null,
+        "rank": null,
+        "note": "unanswerable \u2014 handled at generation layer"
+      },
+      {
+        "id": "q24",
+        "question": "How often are contractor passwords rotated?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q25",
+        "question": "How many days after project close-out is a contractor's account disabled?",
+        "expected": "1. VENDOR PASSWORD AND SYSTEM ACCESS",
+        "rank": 1
+      },
+      {
+        "id": "q26",
+        "question": "On what payment terms are contractor expense claims settled?",
+        "expected": "2. CONTRACTOR EXPENSE CLAIMS",
+        "rank": 1
+      },
+      {
+        "id": "q27",
+        "question": "Do contractors need to disclose conflicts of interest annually like employees do?",
+        "expected": "5. CONFLICT OF INTEREST FOR CONTRACTORS",
+        "rank": 2
+      }
+    ]
+  }
+}

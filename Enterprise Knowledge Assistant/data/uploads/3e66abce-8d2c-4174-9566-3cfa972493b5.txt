@@ -1,0 +1,3 @@
+Codebuff test document.
+This file is used to verify the upload flow works end to end.
+Password guidelines: use a passphrase of at least 12 characters.

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Enterprise Knowledge Assistant — ask questions and get answers grounded in your uploaded documents, with cited evidence." />
+  <title>Enterprise Knowledge Assistant · RAG</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23141a2b'/%3E%3Cpath d='M12 4.5l1.6 4.2 4.2 1.6-4.2 1.6L12 16.1l-1.6-4.2-4.2-1.6 4.2-1.6z' fill='%23d9ab6c'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;550;600;650&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/static/app.css?v=10" />
+
+  <!-- Vendored locally so the app works fully offline (no CDN dependency). -->
+  <script src="/static/vendor/marked.min.js"></script>
+  <script src="/static/vendor/purify.min.js"></script>
+</head>
+<body>
+
+  <!-- =========================================================
+       LOGIN SCREEN (auth gate)
+       ========================================================= -->
+  <div class="login-screen" id="loginScreen" hidden>
+    <div class="login-card">
+      <div class="login-brand">
+        <span class="brand-mark" data-icon="spark"></span>
+        <div class="login-title">Enterprise Knowledge Assistant</div>
+        <div class="login-sub">Sign in to your knowledge workspace</div>
+      </div>
+      <form id="loginForm" autocomplete="on">
+        <div class="field">
+          <label class="field-label" for="loginUser">Username</label>
+          <input class="login-input" id="loginUser" name="username" autocomplete="username" placeholder="admin" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="loginPass">Password</label>
+          <input class="login-input" id="loginPass" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+        </div>
+        <div class="login-err" id="loginErr" hidden></div>
+        <button class="login-btn" id="loginBtn" type="submit">Sign in</button>
+        <p class="login-hint">Default admin — <b>admin</b> / <b>admin123</b>. Create team members after sign-in.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="layout" id="layout" hidden>
+
+    <!-- =========================================================
+         LIBRARY / SIDEBAR PANEL
+         ========================================================= -->
+    <aside class="panel lib-panel" id="libPanel" aria-label="Workspace">
+
+      <div class="brand">
+        <span class="brand-mark" data-icon="spark"></span>
+        <div>
+          <div class="brand-name">Enterprise Knowledge<br />Assistant</div>
+          <div class="brand-sub">Hybrid RAG · cited answers</div>
+        </div>
+      </div>
+
+      <!-- Sidebar tabs: Chats ⇄ Library (+ Team for admins) -->
+      <div class="side-tabs" role="tablist" aria-label="Sidebar sections">
+        <button id="sideTabChats" class="on" role="tab" aria-selected="true">
+          <span data-icon="chat"></span>Chats
+          <span class="tab-count" id="tabChatCount">0</span>
+        </button>
+        <button id="sideTabLib" role="tab" aria-selected="false">
+          <span data-icon="book"></span>Library
+          <span class="tab-count" id="tabLibCount">0</span>
+        </button>
+        <button id="sideTabUsers" class="admin-only" role="tab" aria-selected="false">
+          <span data-icon="user"></span>Team
+          <span class="tab-count" id="tabUserCount">0</span>
+        </button>
+      </div>
+
+      <!-- Chat history view -->
+      <div class="side-view" id="sideViewChats" role="tabpanel">
+        <button class="new-chat-btn" id="newChatBtn" title="Start a new chat">
+          <span data-icon="plus"></span>New chat
+        </button>
+        <div class="chats" id="chats" aria-live="polite">
+          <div class="lib-empty">Loading chats…</div>
+        </div>
+      </div>
+
+      <!-- Library view: upload + filters + document list -->
+      <div class="side-view" id="sideViewLib" role="tabpanel" hidden>
+
+        <!-- Upload. A native <label for="fileInput"> so the file picker opens
+             through pure browser behavior — no JavaScript required. -->
+        <label class="drop" id="drop" for="fileInput" tabindex="0" aria-label="Upload a document">
+          <span class="drop-icon" data-icon="up"></span>
+          <div class="drop-label" id="dropLabel">
+            <b>Upload a document</b>
+            <span>Drop files or click to browse · PDF DOCX TXT MD</span>
+          </div>
+          <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.md" multiple />
+        </label>
+
+        <!-- Per-file upload queue -->
+        <div class="up-queue" id="upQueue" hidden aria-live="polite"></div>
+
+        <div class="field-row">
+          <div class="field">
+            <label class="field-label" for="dept">Department</label>
+            <select id="dept">
+              <option>General</option>
+              <option>HR</option>
+              <option>Finance</option>
+              <option>Legal</option>
+              <option>Engineering</option>
+              <option>Operations</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="sensitivity">Sensitivity</label>
+            <select id="sensitivity">
+              <option value="internal">Internal</option>
+              <option value="confidential">Confidential</option>
+            </select>
+          </div>
+        </div>
+        <div class="scope-note" id="scopeNote" hidden></div>
+
+        <div class="lib-head">
+          <h2>Library</h2>
+          <span class="badge" id="libCount">…</span>
+          <button class="icon-btn" id="libSel" title="Select documents" aria-label="Select documents">
+            <span data-icon="check"></span>
+          </button>
+          <button class="icon-btn" id="libRefresh" title="Refresh library" aria-label="Refresh library">
+            <span data-icon="refresh"></span>
+          </button>
+        </div>
+
+        <div class="lib-tools">
+          <div class="lib-search">
+            <span data-icon="search"></span>
+            <input id="libSearch" type="search" placeholder="Filter by name…" aria-label="Filter documents by name" autocomplete="off" />
+          </div>
+          <div class="lib-filters">
+            <select id="filterDept" aria-label="Filter by department"><option value="">All depts</option></select>
+            <select id="filterSens" aria-label="Filter by sensitivity">
+              <option value="">All levels</option>
+              <option value="internal">Internal</option>
+              <option value="confidential">Confidential</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Bulk actions (visible while selecting) -->
+        <div class="bulkbar" id="bulkBar" hidden>
+          <label class="selall"><input type="checkbox" id="selAll" aria-label="Select all visible" /><span>All</span></label>
+          <span class="bulk-count" id="bulkCount">0 selected</span>
+          <span class="bulk-spacer"></span>
+          <button class="mini-btn danger" id="bulkDelete">Remove</button>
+          <button class="mini-btn" id="bulkClear">Clear</button>
+        </div>
+
+        <div class="lib" id="lib" aria-live="polite">
+          <div class="lib-empty">Loading documents…</div>
+        </div>
+
+      </div>
+
+      <!-- Team view (admins): create & manage users -->
+      <div class="side-view admin-only" id="sideViewUsers" role="tabpanel" hidden>
+
+        <div class="user-form">
+          <b>Add team member</b>
+          <div class="ugrid">
+            <input class="txt" id="nuName" placeholder="Username" autocomplete="off" aria-label="New user username" />
+            <input class="txt" id="nuPass" type="password" placeholder="Password" autocomplete="new-password" aria-label="New user password" />
+            <select id="nuRole" aria-label="New user role">
+              <option value="employee">Employee</option>
+              <option value="admin">Admin</option>
+            </select>
+            <select id="nuDept" aria-label="New user department"></select>
+            <button class="mini-btn accent" id="nuAdd">+ Add</button>
+          </div>
+        </div>
+
+        <div class="users-head">
+          <h2>Team</h2>
+          <span class="badge" id="userCount">…</span>
+        </div>
+        <div class="users" id="users" aria-live="polite">
+          <div class="lib-empty">Loading users…</div>
+        </div>
+
+      </div>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat"><b id="statDocs">–</b><span>documents</span></div>
+        <div class="stat"><b id="statChunks">–</b><span>chunks</span></div>
+        <div class="stat"><b id="statVectors">–</b><span>vectors</span></div>
+      </div>
+
+      <!-- Current user -->
+      <div class="userbar">
+        <span class="ub-avatar" id="ubAvatar">A</span>
+        <div class="ub-meta">
+          <b id="ubName">…</b>
+          <span id="ubRole">…</span>
+        </div>
+        <button class="icon-btn" id="logoutBtn" title="Sign out" aria-label="Sign out">
+          <span data-icon="x"></span>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- =========================================================
+         CHAT
+         ========================================================= -->
+    <main class="chat-panel">
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn only-narrow" id="btnLib" title="Library" aria-label="Open document library">
+            <span data-icon="menu"></span>
+          </button>
+          <div class="topbar-title">
+            <h1>Ask your documents</h1>
+            <span class="status-pill"><span class="dot"></span>Hybrid RAG · dense + BM25 + rerank</span>
+          </div>
+        </div>
+
+        <div class="topbar-mid">
+          <div class="seg" role="group" aria-label="Assistant mode">
+            <button id="tabAsk" class="on" aria-pressed="true"><span data-icon="chat"></span>Ask</button>
+            <button id="tabCompare" aria-pressed="false"><span data-icon="cols"></span>Compare</button>
+          </div>
+        </div>
+
+        <div class="topbar-side">
+          <button class="icon-btn only-narrow" id="btnEv" title="Evidence" aria-label="Open evidence rail">
+            <span data-icon="layers"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Ask view -->
+      <section class="view" id="viewAsk">
+        <div class="thread" id="thread">
+          <div class="empty-state" id="emptyState">
+            <div class="empty-mark" data-icon="spark"></div>
+            <h2>Ask your documents</h2>
+            <p>
+              Every answer is built from the passages that actually support it —
+              no guessing. Upload a policy, contract or handbook, then ask anything.<br />
+              Tap the <b>[n]</b> markers to jump to the exact source in the evidence rail.
+            </p>
+            <div class="sugg" id="suggestions">
+              <button type="button" data-q="Summarise the key policies that apply to employees, with the document each comes from.">
+                <span data-icon="spark"></span>Summarise the main policies in the library
+              </button>
+              <button type="button" data-q="What do the documents say about confidentiality and data classification?">
+                <span data-icon="spark"></span>Confidentiality &amp; data classification
+              </button>
+              <button type="button" data-q="Find anything that mentions annual leave, entitlements or carry-over.">
+                <span data-icon="spark"></span>Annual leave entitlements
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compare view -->
+      <section class="view" id="viewCompare" hidden>
+        <div class="cmp-scroll">
+          <div class="cmp-intro" id="cmpIntro">
+            <span data-icon="cols"></span>
+            <h2>Compare retrieval modes</h2>
+            <p>
+              The same query, run four ways — semantic search, keyword search, hybrid fusion,
+              and hybrid + cross-encoder reranking. No LLM call: this is a live view of why
+              hybrid + rerank wins on the hard questions.
+            </p>
+          </div>
+          <div class="cmp-qbar" id="cmpQbar" hidden>
+            <span data-icon="search"></span>
+            <div>
+              <span class="lbl">Query</span>
+              <div class="q" id="cmpQText"></div>
+            </div>
+          </div>
+          <div class="cmp-grid" id="cmpGrid"></div>
+        </div>
+      </section>
+
+      <!-- Composer -->
+      <footer class="composer">
+        <div class="composer-box">
+          <textarea id="input" rows="1" placeholder="Ask about an uploaded document…" aria-label="Your question"></textarea>
+          <div class="composer-side">
+            <span class="hint" id="composerHint">↵ send · shift+↵ newline</span>
+            <button class="stop-btn" id="stopBtn" hidden title="Stop generating" aria-label="Stop generating">
+              <span data-icon="stop"></span>
+            </button>
+            <button class="send-btn" id="sendBtn" title="Ask" aria-label="Ask">
+              <span data-icon="send"></span>
+            </button>
+          </div>
+        </div>
+        <p class="fineprint">Answers are grounded in your uploaded documents — every claim cites its source.</p>
+      </footer>
+
+    </main>
+
+    <!-- =========================================================
+         EVIDENCE PANEL
+         ========================================================= -->
+    <aside class="panel ev-panel" id="evPanel" aria-label="Evidence for the last answer">
+
+      <div class="ev-head">
+        <div class="ev-head-txt">
+          <h2><span data-icon="layers"></span>Evidence</h2>
+          <span id="evSub">Passages cited by the last answer appear here.</span>
+        </div>
+        <span class="ev-count badge" id="evCount" hidden></span>
+      </div>
+
+      <div class="ev-body" id="evBody">
+        <div class="ev-empty">
+          <span data-icon="layers"></span>
+          <span>Ask a question to see the exact passages your answer is grounded in, with page and section context.</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Backdrop for the responsive drawers -->
+  <div id="backdrop" hidden></div>
+
+  <!-- Modal + toast roots -->
+  <div id="modalRoot"></div>
+  <div class="toast-root" id="toastRoot" role="status" aria-live="polite"></div>
+
+  <!-- Floating citation preview -->
+  <div class="cite-tip" id="citeTip" hidden></div>
+
+  <script src="/static/app.js?v=10"></script>
+</body>
+</html>
